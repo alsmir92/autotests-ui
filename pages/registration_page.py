@@ -1,11 +1,8 @@
-import pytest
 from playwright.sync_api import Page, expect
 
-from fixtures.pages import registration_page
 from pages.base_page import BasePage
 
 
-@pytest.fixture(registration_page)
 class RegistrationPage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)
@@ -31,7 +28,3 @@ class RegistrationPage(BasePage):
 
     def click_registration_button(self):
         self.registration_button.click()
-
-        dashboard_title = page.get_by_test_id(
-            'dashboard-toolbar-title-text')
-        expect(dashboard_title).to_be_visible()
