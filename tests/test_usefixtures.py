@@ -16,7 +16,7 @@ def test_read_all_books_in_library():
     print("Reading all books")
 
 
-@pytest.mark.usefixtures('fill_books_database', 'clear_books_database')
+@pytest.mark.usefixtures('clear_books_database', 'fill_books_database')
 class TestLibrary:
     def test_read_book_from_library(self):
         ...
