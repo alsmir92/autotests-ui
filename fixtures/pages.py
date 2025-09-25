@@ -19,18 +19,3 @@ def registration_page(chromium_page) -> RegistrationPage:
 @pytest.fixture
 def dashboard_page(chromium_page) -> DashboardPage:
     return DashboardPage(page=chromium_page)
-
-
-@pytest.fixture
-def email():
-    return 'user.name@gmail.com'
-
-
-@pytest.fixture
-def username():
-    return 'username'
-
-
-@pytest.fixture
-def password():
-    return 'password'
